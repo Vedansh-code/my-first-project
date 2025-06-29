@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>BlackJack Game</title>
+        <link rel="stylesheet" href="blackjack.css">
+    </head>
+
+<body>
+    <div class="game-container">
+        <div class="top-right">
+            <p id="purse-el">Purse: $500</p>
+            <p>Add Money:</p>
+            <div class="chip-buttons">
+                <button onclick="addone()">+100</button>
+                <button onclick="addtwo()">+200</button>
+                <button onclick="addfive()">+500</button>
+            </div>
+        </div>
+
+        <h1>Blackjack</h1>
+        <h2 id="message-el">Want to play a round?</h2>
+
+        <div class="card-area">
+            <p id="cards-el">Cards: </p>
+            <p id="sum-el">Sum: </p>
+        </div>
+
+        <div class="controls">
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="newCard()">New Card</button>
+        </div>
+    </div>
+
+    <script src="blackjack.js"></script>
+</body>
+ 
