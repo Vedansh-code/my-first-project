@@ -16,7 +16,7 @@ body {
 
 .game-container {
     max-width: 1100px;          /* Increased width */
-    height: 400px;              /* Give it a fixed height */
+    height: 425px;              /* Give it a fixed height */
     margin: 80px auto;
     text-align: center;
     padding: 40px 30px;
@@ -106,3 +106,28 @@ h2 {
     background: linear-gradient(to right, #2ecc71, #27ae60);
     transform: scale(1.05);
 }
+
+
+
+/* Bet Input Styling */
+#bet-input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    width: 200px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+#bet-input:focus {
+    background-color: #fffbe6;
+    box-shadow: 0 0 8px #fbc531;
+}
+

@@ -8,10 +8,14 @@ let cardsEl = document.getElementById("cards-el")
 let purseEl = document.getElementById("purse-el")
 let money = 500
 purseEl.textContent = "Purse: " + money
+let currentBet = 0
+let betamount = document.getElementById("bet-input")
 
 function startGame(){
-    if(money > 0){
-    money -= 100
+    let enteredBet = parseInt(betamount.value)
+    if(money >= enteredBet){
+    currentBet = enteredBet
+    money -= currentBet
     purseEl.textContent = "Purse: " + money
     alive = true
     let first = getRandomNum()
@@ -35,7 +39,7 @@ function renderGame(){
     else if(sum === 21){
         message = "Congrats, its a blackjack!"
         alive = false
-        money += 200
+        money += currentBet*2
         purseEl.textContent = "Purse: " + money
     }
     else{
@@ -79,4 +83,18 @@ function addtwo(){
 function addfive(){
     money += 500
     purseEl.textContent = "Purse: " + money
+}
+
+function restartGame(){
+    money = 500
+    cards = []
+    sum = 0
+    alive = false
+    currentBet = 0
+
+    purseEl.textContent = "Purse: " + money
+    cardsEl.textContent = "Cards: "
+    sumEl.textContent = "Sum: "
+    messageEl.textContent = "Game reset. Place your bet to start"
+    betamount.value = "";
 }
