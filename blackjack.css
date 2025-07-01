@@ -16,7 +16,7 @@ body {
 
 .game-container {
     max-width: 1100px;          /* Increased width */
-    height: 425px;              /* Give it a fixed height */
+    height: 550px;              /* Give it a fixed height */
     margin: 80px auto;
     text-align: center;
     padding: 40px 30px;
@@ -131,3 +131,13 @@ h2 {
     box-shadow: 0 0 8px #fbc531;
 }
 
+.card-img {
+    height: 150px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.card-img:hover {
+    transform: scale(1.1);
+}
